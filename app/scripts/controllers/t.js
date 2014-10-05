@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name abcApp.controller:LetteraCtrl
+ * @name abcApp.controller:TCtrl
  * @description
- * # LetteraCtrl
+ * # TCtrl
  * Controller of the abcApp
  */
 angular.module('abcApp')
-  .controller('LetteraCtrl', function ($scope) {
+  .controller('TCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
