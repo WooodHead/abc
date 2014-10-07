@@ -2,6 +2,8 @@
 
 This is a little app I'm buiding to help my kids learn their ABCs
 
+![Screenshot of my ABC app	](https://www.dropbox.com/s/d6vj6r9318rpy0f/abcApp.png?dl=0)
+
 ##Install
 ```bash
 git clone https://github.com/kevintame/abc.git
