@@ -1,6 +1,38 @@
-<style>body{background: #17A3A5;}</style>
-
-<div class="col-sm-12">
-	<p class="pull-right"><a href="#/"><i class="fa fa-times-circle fa-5x"></i></a></p>
-	<h1 class="text-center" style="color:#fff; font-size: 40em;">B</h1>
+<style>body{background: #17A3A5;}
+</style>
+<div class="container">
+	<div class="col-sm-12">
+		<p class="pull-right"><a href="#/"><i class="fa fa-times-circle fa-5x"></i></a></p>
+		<div class="col-sm-6">
+			<svg id="svg" version="1.1" viewBox="0 0 612 792" preserveAspectRatio="xMinYMin meet" class="svg-content"></svg>
+		</div>
+		<div class="col-sm-6">
+			<h1 class="text-center" style="color:#fff; font-size: 40em;">B</h1>
+		</div>
+	</div>
 </div>
+<script>
+var s = Snap("#svg");
+Snap.load("images/bunny.svg", function (a) {
+    s.append(a);
+	
+	eye1 = s.select("#eye1");
+	eye2 = s.select("#eye2");
+	eyes = s.group(eye1, eye2);
+	
+	function blink1(){
+  		eye1.animate({ry:1}, 100, 
+  			function(){
+  				eye1.animate({ry:21.104}, 100);
+  				});
+			};
+	function blink2(){
+  		eye2.animate({ry:1}, 100, 
+  			function(){
+  				eye2.animate({ry:21.104}, 100);
+  				});
+			};
+	setInterval(blink1, 5000);
+	setInterval(blink2, 5000);
+});
+</script>
