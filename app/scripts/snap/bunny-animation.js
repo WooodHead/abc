@@ -1,6 +1,5 @@
 'use strict';
 
-
 var s = new Snap('#bunny-svg');
 Snap.load('images/bunny.svg', function (a) {
     s.append(a);
