@@ -2,7 +2,7 @@
 
 This is a little app I'm buiding to help my kids learn their ABCs
 
-![Screenshot of my ABC app](http://imgur.com/EwRsEsz)
+![Screenshot of my ABC app](http://i.imgur.com/EwRsEsz.png)
 
 ##Install
 ```bash
