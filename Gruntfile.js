@@ -207,7 +207,7 @@ module.exports = function (grunt) {
         src: [
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
-          // '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
       }
@@ -236,10 +236,19 @@ module.exports = function (grunt) {
     usemin: {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+      js: '<%= yeoman.dist %>/scripts/*.js',
       options: {
-        assetsDirs: ['<%= yeoman.dist %>','<%= yeoman.dist %>/images']
+        assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images'],
+        patterns: {
+          // FIXME While usemin won't have full support for revved files we have to put all references manually here
+          js: [
+              [/(images\/.*?\.(?:gif|jpeg|jpg|png|webp|svg))/gm, 'Update the JS to reference our revved images']
+          ]
+        }
       }
     },
+
+
 
     // The following *-min tasks will produce minified files in the dist folder
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
@@ -279,6 +288,15 @@ module.exports = function (grunt) {
     },
 
     svgmin: {
+      options: {
+      plugins: [
+        { removeViewBox: false},
+        { removeUselessStrokeAndFill: false}, 
+        { removeEmptyAttrs: false },
+        { convertShapeToPath: false},
+        { cleanupIDs: false}
+      ]
+    },
       dist: {
         files: [{
           expand: true,
@@ -286,7 +304,7 @@ module.exports = function (grunt) {
           src: '{,*/}*.svg',
           dest: '<%= yeoman.dist %>/images'
         }]
-      }
+      },
     },
 
     htmlmin: {
