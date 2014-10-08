@@ -40,27 +40,4 @@ a:hover{
 .dark-blue:hover{ background-color: #2f7d8c;}
 
 
-.svg-bunny .eye {
-  -webkit-animation-name: blink;
-  -webkit-animation-duration: 8s;
-  -webkit-animation-iteration-count: infinite; 
-  -webkit-transform-origin: 50%;
-  
-  animation-name: blink;
-  animation-duration: 8s;
-  animation-iteration-count: infinite; 
-  transform-origin: 50%;
-}
-
-@-webkit-keyframes blink { 
-  0% { -webkit-transform: scaleX(1) scaleY(1); } 
-  1% { -webkit-transform: scaleX(1) scaleY(0.1); } 
-  2% { -webkit-transform: scaleX(1) scaleY(1); } 
-  60% { -webkit-transform: scaleX(1) scaleY(1); } 
-  61% { -webkit-transform: scaleX(1) scaleY(0.1);} 
-  62% { -webkit-transform: scaleX(1) scaleY(1); } 
-  100% { -webkit-transform: scaleX(1) scaleY(1); }
-}
-
-
 
