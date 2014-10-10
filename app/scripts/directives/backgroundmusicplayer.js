@@ -9,26 +9,33 @@
 angular.module('abcApp')
 .directive('backgroundMusicPlayer', function () {
 	return {
-		template: '<button class="btn btn-default" id="myBtn">Play</button> <button class="btn btn-default" id="mute">Mute</button>',
+		template: '<input type="button" class="btn btn-default mute-button" id="mute" value="Mute" onclick="toggle(this);"></input>',
 		restrict: 'EA',
-		link: function backgroundMusic() {
-			var sound = new Howl({
-				urls: ['resources/song.mp3'],
-				volume: 0.2,
-				loop: true,
-				autoplay: true
-			});
-				var mute = document.getElementById('mute');
-				mute.onclick = function() {
-					if (sound === sound.unmute){
-						sound.unmute();
-					}
-					else {
-						sound.mute();
-					}
-					};
-				}
+		link: function backgroundMusic(element) {
+			    var sound = new Howl({
+                urls: ['https://dl.dropboxusercontent.com/u/1538714/article_resources/song.m4a'],
+                volume: 0.2,
+                loop: true,
+                autoplay: true
+            });
+                function toggle(button)
+            {
+                if(button.value==='Play')
+                {
+                    button.value='Mute';
+                    sound.unmute();
+
+                    console.log('Play');
+                }
+                else
+                {
+                    button.value='Play';
+                    sound.mute();
+                    console.log('mute');
+
+                }
+            }
+		}
 	};
 });
-
 

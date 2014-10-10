@@ -3,41 +3,6 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import "font-awesome/scss/font-awesome";
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "_abcAppStyles.scss";
 // endbower
-
-a{
-  text-decoration: none;
-  color: #fff;
-}
-
-a:hover{
-  text-decoration: none;
-  color: #efefef;
-}
-
-.container {
-  margin-top: 20px;
-}
-
-.letter{
-  margin:0 0 30px 0;
-  background-color: #efefef;
-  text-align: center;
-  font-size: 5.5em;
-  cursor: pointer;
-  color: #FFF;
-}
-
-.red{background-color: #FC6E59}
-.red:hover{ background-color: #fd9a8b;}
-.yellow{background-color: #FCCB5F;}
-.yellow:hover{ background-color: #fddb91;}
-.green{background-color: #8DBF67;}
-.green:hover{ background-color: #9ac779;}
-.light-blue{background-color: #17A3A5;}
-.light-blue:hover{ background-color: #1ab9bb;}
-.dark-blue{background-color: #225B66;}
-.dark-blue:hover{ background-color: #2f7d8c;}
-
-
 
