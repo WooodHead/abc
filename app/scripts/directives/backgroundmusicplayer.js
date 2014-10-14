@@ -16,7 +16,7 @@ angular.module('abcApp')
                 urls: ['https://dl.dropboxusercontent.com/u/1538714/article_resources/song.m4a'],
                 volume: 0.2,
                 loop: true,
-                autoplay: true
+                autoplay: false
             });
                 function toggle(button)
             {
